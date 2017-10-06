@@ -10,6 +10,16 @@
                     <div class="card-body">
                         <h3 class="card-title text-center">Sign Up</h3>
                         <h5 class="card-subtitle text-center text-muted mb-3">create a new account</h5>
+                        
+                        <% if (message.length > 0) { %>
+                            <div class="alert alert-danger alert-dismissible fade show text-center">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>                                
+                                <%= message %>
+                            </div>
+                        <% } %>
+
                         <form method="post">
                             <div class="form-group">
                                 <label for="email">Username</label>

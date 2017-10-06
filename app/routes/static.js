@@ -6,7 +6,7 @@ const adminRequired = require('../middleware/adminRequired');
 module.exports = function(app) {
 
     // Home Page
-    app.get('/', function(req, res) {
+    app.get('/', loginRequired, function(req, res) {
         res.render('static/home.ejs', {
             title : "Home",
         });
