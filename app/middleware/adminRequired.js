@@ -5,7 +5,10 @@ module.exports = function(req, res, next) {
         /* Continue */
         return next();
     } else {
+        /* Return Flash Message */
+        req.flash('loginMessage', 'Please Sign In As Admin');
+
         /* If Not Authenticated & Admin, Redirect To Login Page */
-        res.redirect('/login'); 
+        res.redirect('/sign-in'); 
     } 	
 };
